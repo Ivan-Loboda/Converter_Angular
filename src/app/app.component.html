@@ -24,7 +24,7 @@
   ;
 </style>
 
-<div [ngStyle]="{'background-color': 'rgb(72, 174, 47)', 'min-height': '50vh', 'border-bottom': '5px solid'}">
+<div [ngStyle]="{'background-color': 'rgb(128, 217, 215)', 'min-height': '50vh', 'border-bottom': '5px solid'}">
   <div [ngStyle]="{'padding': '25px'}">
     <h1 [ngStyle]="{'font-size': '50px', 'text-align': 'center', 'margin-bottom': '25px'}">Privat Bank</h1>
   
@@ -47,7 +47,7 @@
   </div>
 </div>
 
-<div [ngStyle]="{'background-color': 'rgb(72, 174, 47)', 'min-height': '50vh'}">
+<div [ngStyle]="{'background-color': 'rgb(128, 217, 215)', 'min-height': '50vh'}">
   <div [ngStyle]="{'padding': '25px'}">
     <h2 [ngStyle]="{'font-size': '35px', 'text-align': 'center', 'margin-bottom': '25px'}">TRADE</h2>
     <form [ngStyle]="{'margin': '0 auto', 'width': '550px', 'margin-bottom': '20px'}">
@@ -67,7 +67,7 @@
   
       <button type="submit" (click)="exchange()" [ngStyle]="{'height': '30px'}">SUBMIT</button>
     </form>
-    <p [ngStyle]="{'margin': '0 auto', 'font-size': '50px', 'padding': '10px', 'width': '200px', 'height': '70px', 'text-align': 'center', 'text-transform': 'uppercase', 'background-color': 'rgba(255, 255, 255, 0.3)', 'border': '2px solid'}">{{tradeResult}}</p>
+    <p [ngStyle]="{'margin': '0 auto', 'font-size': '50px', 'padding': '10px', 'height': '70px', 'text-align': 'center', 'text-transform': 'uppercase', 'background-color': 'rgba(255, 255, 255, 0.3)', 'border': '2px solid'}">{{tradeResult}} {{curentCurrency}}</p>
   </div>
 </div>
 

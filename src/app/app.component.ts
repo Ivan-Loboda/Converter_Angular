@@ -24,6 +24,8 @@ export class AppComponent implements OnInit {
     sumInput: ''
   };
 
+  curentCurrency: string = '';
+
   tradeResult?: number;
 
   constructor(private http: HttpClient) { }
@@ -59,6 +61,8 @@ export class AppComponent implements OnInit {
     } else if(this.tradeForm.tradeType === 'sale') {
       this.tradeResult = (saleRate * this.tradeForm.sumInput)
     }
+
+    this.curentCurrency = this.tradeForm.currency;
   };
 
   ngOnInit(): void {
