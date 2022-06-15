@@ -24,43 +24,51 @@
   ;
 </style>
 
+<div [ngStyle]="{'background-color': 'rgb(72, 174, 47)', 'min-height': '50vh', 'border-bottom': '5px solid'}">
+  <div [ngStyle]="{'padding': '25px'}">
+    <h1 [ngStyle]="{'font-size': '50px', 'text-align': 'center', 'margin-bottom': '25px'}">Privat Bank</h1>
+  
+    <h3 [ngStyle]="{'font-size': '35px', 'text-align': 'center', 'margin-bottom': '30px'}">{{response.baseCurrencyLit}}</h3>
+    <h3 [ngStyle]="{'font-size': '35px', 'text-align': 'center'}">Date: {{response.date}}</h3>
+  
+    <div [ngStyle]="{'margin': '0 auto', 'width': '300px'}">
+      <div [ngStyle]="{'display': 'flex', 'align-items': 'center', 'width': '100%', 'margin-bottom': '15px'}">
+        <p [ngStyle]="{'margin-right': '30px', 'font-size': '25px', 'font-weight': '600'}">{{response.eur.currency}}:</p>
+        <p [ngStyle]="{'margin-right': '30px', 'font-size': '20px'}">buy: {{response.eur.purchaseRate}}</p>
+        <p [ngStyle]="{'font-size': '20px'}">sale: {{response.eur.saleRate}}</p>
+      </div>
 
-<h1 [ngStyle]="{'font-size': '50px', 'text-align': 'center'}">Privat Bank</h1>
-
-<h2 [ngStyle]="{'font-size': '35px', 'text-align': 'center'}">{{response.baseCurrencyLit}}</h2>
-<h3 [ngStyle]="{'font-size': '35px', 'text-align': 'center'}">Date: {{response.date}}</h3>
-
-<div [ngStyle]="{'display': 'flex' , 'align-items': 'center', 'justify-content': 'center'}">
-  <p [ngStyle]="{'margin-right': '30px', 'font-size': '25px', 'font-weight': '600'}">{{response.eur.currency}}:</p>
-  <p [ngStyle]="{'margin-right': '30px', 'font-size': '20px'}">buy: {{response.eur.purchaseRate}}</p>
-  <p [ngStyle]="{'font-size': '20px'}">sale: {{response.eur.saleRate}}</p>
+      <div [ngStyle]="{'display': 'flex', 'align-items': 'center', 'width': '100%', 'margin-bottom': '15px'}">
+        <p [ngStyle]="{'margin-right': '30px', 'font-size': '25px', 'font-weight': '600'}">{{response.usd.currency}}:</p>
+        <p [ngStyle]="{'margin-right': '30px', 'font-size': '20px'}">buy: {{response.usd.purchaseRate}}</p>
+        <p [ngStyle]="{'font-size': '20px'}">sale: {{response.usd.saleRate}}</p>
+      </div>
+    </div>
+  </div>
 </div>
-<div [ngStyle]="{'display': 'flex' , 'align-items': 'center', 'justify-content': 'center'}">
-  <p [ngStyle]="{'margin-right': '30px', 'font-size': '25px', 'font-weight': '600'}">{{response.usd.currency}}:</p>
-  <p [ngStyle]="{'margin-right': '30px', 'font-size': '20px'}">buy: {{response.usd.purchaseRate}}</p>
-  <p [ngStyle]="{'font-size': '20px'}">sale: {{response.usd.saleRate}}</p>
-</div>
 
-<div>
-  <h2>TRADE</h2>
-  <form>
-    <select [(ngModel)]="tradeForm.tradeType" name="tradeType">
-      <label>Type of operation</label>
-      <option value='buy'>BUY</option>
-      <option value='sale'>SALE</option>
-    </select>
-
-    <select [(ngModel)]="tradeForm.currency" name="currency">
-      <label>Currency</label>
-      <option value='eur'>{{response.eur.currency}}</option>
-      <option value='usd'>{{response.usd.currency}}</option>
-    </select>
-
-    <input type="number" placeholder="enter a sum" name="currencySum" [(ngModel)]="tradeForm.sumInput" />
-
-    <button type="submit" (click)="exchange()">SUBMIT</button>
-  </form>
-  <span>{{tradeResult}}</span>
+<div [ngStyle]="{'background-color': 'rgb(72, 174, 47)', 'min-height': '50vh'}">
+  <div [ngStyle]="{'padding': '25px'}">
+    <h2 [ngStyle]="{'font-size': '35px', 'text-align': 'center', 'margin-bottom': '25px'}">TRADE</h2>
+    <form [ngStyle]="{'margin': '0 auto', 'width': '550px', 'margin-bottom': '20px'}">
+      <select [(ngModel)]="tradeForm.tradeType" name="tradeType" [ngStyle]="{'height': '30px', 'min-width': '100px', 'margin-right': '20px'}">
+        <label>Type of operation</label>
+        <option value='buy'>BUY</option>
+        <option value='sale'>SALE</option>
+      </select>
+  
+      <select [(ngModel)]="tradeForm.currency" name="currency" [ngStyle]="{'height': '30px', 'min-width': '100px', 'margin-right': '20px'}">
+        <label>Currency</label>
+        <option value='eur'>{{response.eur.currency}}</option>
+        <option value='usd'>{{response.usd.currency}}</option>
+      </select>
+  
+      <input type="number" placeholder="enter a sum" name="currencySum" [(ngModel)]="tradeForm.sumInput" [ngStyle]="{'height': '25px', 'margin-right': '40px'}"/>
+  
+      <button type="submit" (click)="exchange()" [ngStyle]="{'height': '30px'}">SUBMIT</button>
+    </form>
+    <p [ngStyle]="{'margin': '0 auto', 'font-size': '50px', 'padding': '10px', 'width': '200px', 'height': '70px', 'text-align': 'center', 'text-transform': 'uppercase', 'background-color': 'rgba(255, 255, 255, 0.3)', 'border': '2px solid'}">{{tradeResult}}</p>
+  </div>
 </div>
 
 <!-- <app-header></app-header> -->

@@ -1,0 +1,16 @@
+.section {
+    background-color: rgb(72, 174, 47);
+};
+
+.container {
+    padding: 40px;
+};
+
+.title {
+    font-size: 50px;
+    text-align: center;
+};
+
+.sub_title {
+    font-size: 350px;
+};

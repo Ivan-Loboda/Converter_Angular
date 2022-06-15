@@ -5,8 +5,9 @@ import { raceWith } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
+
 export class AppComponent implements OnInit {
   title = 'Currency_Converter';
 
@@ -19,16 +20,16 @@ export class AppComponent implements OnInit {
 
   tradeForm: any = {
     tradeType: 'buy',
-    currency: 'eur',
+    currency: '',
     sumInput: ''
-  }
+  };
 
-  tradeResult: number = 0;
+  tradeResult?: number;
 
   constructor(private http: HttpClient) { }
 
   search() {
-    // this.http.get("https://api.privatbank.ua/p24api/exchange_rates?json&date=01.12.2014")
+    // this.http.get("https://api.privatbank.ua/p24api/exchange_rates?json&date=01.01.2021")
     //   .subscribe((data: any) => {
     //     return this.response = {
     //       date: data.date,
