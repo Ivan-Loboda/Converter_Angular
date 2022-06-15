@@ -16,8 +16,8 @@ export class HeaderComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   search() {
-      // return this.http.get("https://api.privatbank.ua/p24api/exchange_rates?json&date=01.12.2014").subscribe((data) => {this.response = data})
-      this.http.get("https://pro-test-rest-api.herokuapp.com/contacts/").subscribe((data) => this.response = data)
+      return this.http.get("https://api.privatbank.ua/p24api/exchange_rates?json&date=01.12.2014").subscribe((data) => {this.response = data})
+      // this.http.get("https://pro-test-rest-api.herokuapp.com/contacts/").subscribe((data) => this.response = data)
   }
 
   ngOnInit() {
