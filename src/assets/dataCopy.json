@@ -1,0 +1,25 @@
+{
+    "date": "01.12.2014",
+    "baseCurrency": 980,
+    "baseCurrencyLit": "UAH",
+    "exchangeRate": {
+        "eur": {
+            "baseCurrency": "UAH",
+            "currency": "EUR",
+            "saleRateNB": 18.79492,
+            "purchaseRateNB": 18.79492,
+            "saleRate": 20,
+            "purchaseRate": 19.2
+        },
+        "usd": {
+            {
+                "baseCurrency": "UAH",
+                "currency": "USD",
+                "saleRateNB": 15.056413,
+                "purchaseRateNB": 15.056413,
+                "saleRate": 15.7,
+                "purchaseRate": 15.35
+            }
+        }
+    }
+}

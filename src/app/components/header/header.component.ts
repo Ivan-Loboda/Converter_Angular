@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -13,15 +12,10 @@ export class HeaderComponent implements OnInit {
   hoyodel:number = 322;
   response:any;
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
-  search() {
-      return this.http.get("https://api.privatbank.ua/p24api/exchange_rates?json&date=01.12.2014").subscribe((data) => {this.response = data})
-      // this.http.get("https://pro-test-rest-api.herokuapp.com/contacts/").subscribe((data) => this.response = data)
-  }
 
   ngOnInit() {
-    this.search();
     this.model = 228228
     this.hoyodel = 322322
   }

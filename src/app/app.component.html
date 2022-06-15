@@ -25,8 +25,25 @@
 
 </style>
 
+
+<h1 [ngStyle]="{'font-size': '50px', 'text-align': 'center'}">Privat Bank</h1>
+
+<h2 [ngStyle]="{'font-size': '35px', 'text-align': 'center'}">{{response.baseCurrencyLit}}</h2>
+<h3 [ngStyle]="{'font-size': '35px', 'text-align': 'center'}">date: {{response.date}}</h3>
+
+<div [ngStyle]="{'display': 'flex' , 'align-items': 'center', 'justify-content': 'center'}">
+    <p [ngStyle]="{'margin-right': '30px', 'font-size': '25px', 'font-weight': '600'}">{{response.eur.currency}}:</p>
+    <p [ngStyle]="{'margin-right': '30px', 'font-size': '20px'}">buy: {{response.eur.purchaseRate}}</p>
+    <p [ngStyle]="{'font-size': '20px'}">sale: {{response.eur.saleRate}}</p>
+</div>
+<div [ngStyle]="{'display': 'flex' , 'align-items': 'center', 'justify-content': 'center'}">
+    <p [ngStyle]="{'margin-right': '30px', 'font-size': '25px', 'font-weight': '600'}">{{response.usd.currency}}:</p>
+    <p [ngStyle]="{'margin-right': '30px', 'font-size': '20px'}">buy: {{response.usd.purchaseRate}}</p>
+    <p [ngStyle]="{'font-size': '20px'}">sale:  {{response.usd.saleRate}}</p>
+
+</div>
+
+
 <app-header></app-header>
-<app-buy></app-buy>
-<app-sale></app-sale>
 
 <router-outlet></router-outlet>
