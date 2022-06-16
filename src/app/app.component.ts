@@ -46,8 +46,8 @@ export class AppComponent implements OnInit {
       return this.response = {
         date: data.date,
         baseCurrencyLit: data.baseCurrencyLit,
-        usd: data.exchangeRate[23],
-        eur: data.exchangeRate[8],
+        usd: data.exchangeRate.find((item: any) => item.currency === 'USD'),
+        eur: data.exchangeRate.find((item: any) => item.currency === 'EUR'),
       }
     });
   };
