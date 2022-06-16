@@ -31,7 +31,10 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   search() {
-    // this.http.get("https://api.privatbank.ua/p24api/exchange_rates?json&date=01.01.2021")
+
+    const currentDate = new Date().toLocaleDateString();
+
+    // this.http.get(`https://api.privatbank.ua/p24api/exchange_rates?json&date=${currentDate}`)
     //   .subscribe((data: any) => {
     //     return this.response = {
     //       date: data.date,
@@ -50,15 +53,16 @@ export class AppComponent implements OnInit {
         eur: data.exchangeRate.find((item: any) => item.currency === 'EUR'),
       }
     });
+
   };
 
   exchange() {
     const purchaseRate = this.response[this.tradeForm.currency].purchaseRate;
     const saleRate = this.response[this.tradeForm.currency].saleRate;
 
-    if(this.tradeForm.tradeType === 'buy') {
+    if (this.tradeForm.tradeType === 'buy') {
       this.tradeResult = (purchaseRate * this.tradeForm.sumInput)
-    } else if(this.tradeForm.tradeType === 'sale') {
+    } else if (this.tradeForm.tradeType === 'sale') {
       this.tradeResult = (saleRate * this.tradeForm.sumInput)
     }
 
