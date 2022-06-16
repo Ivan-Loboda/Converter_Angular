@@ -1,16 +1,72 @@
 .section {
     background-color: rgb(72, 174, 47);
-};
+    border-bottom: 5px solid;
+}
 
 .container {
     padding: 40px;
-};
+}
 
 .title {
     font-size: 50px;
     text-align: center;
-};
+}
 
 .sub_title {
-    font-size: 350px;
-};
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.form_wrapper {
+    margin: 0 auto;
+    width: 550px;
+    margin-bottom: 20px;
+}
+
+.section_sum_wrapper {
+    margin: 0 auto;
+    width: 300px;
+}
+
+.sum_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.sum_title {
+    margin-right: 30px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.sum_buy {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.sum_sale {
+    font-size: 20px;
+}
+
+.form_select {
+    height: 30px;
+    min-width: 100px;
+    margin-right: 20px;
+}
+
+.form_input {
+    height: 30px;
+}
+
+.result_sum {
+    margin: 0 auto;
+    font-size: 50px;
+    padding: 10px;
+    height: 70px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid;
+}
